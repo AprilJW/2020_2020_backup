@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/libs/xml_io/pascal_voc_io.py=utf8
+encoding//src/ui/BrowseFilePath.py=utf-8
+encoding//src/ui/MinMaxWidget.py=utf-8
+encoding//src/ui/MultiSelectDirDialog.py=utf-8
+encoding//src/ui/OptionDialog.py=utf-8
+encoding//src/ui/RGBWidget.py=utf-8
+encoding//src/ui/Ui_FormatVocDataWidget.py=utf-8
+encoding//src/ui/Ui_MainWindow.py=utf-8

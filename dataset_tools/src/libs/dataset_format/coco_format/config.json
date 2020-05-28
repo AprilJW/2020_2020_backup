@@ -1,0 +1,25 @@
+{
+    "anno_type": "instances",
+    "coco_base_url": "http://127.0.0.1:8007/",
+    "dataset_name": "COCO_dataset_2014",
+    "dataset_prefix": "2007_",
+    "image_modes": [
+        "train2014",
+        "val2014"
+    ],
+    "image_size": {
+        "height": 1024,
+        "width": 1024
+    },
+    "label_modes": [
+        "train2014",
+        "val2014",
+        "minival2014",
+        "valminusminival2014"
+    ],
+    "sub_dirs": {
+        "annotations": {},
+        "train2014": {},
+        "val2014": {}
+    }
+}

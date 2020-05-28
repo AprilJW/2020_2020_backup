@@ -1,0 +1,29 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "shade_offset": {
+        "value": -30,
+        "value_options": [],
+        "type": "int",
+        "minimum": -9999,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "shade_scale": {
+        "value": 1,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0.1,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    }
+}

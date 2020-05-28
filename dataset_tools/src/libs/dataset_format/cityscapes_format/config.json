@@ -1,0 +1,11 @@
+{
+  "dataset_name": "cityscapes",
+  "mode_dirs": {"leftImg8bit": {}, "imglists":{}, "gtFine": {}},
+  "split_dirs": {"train": {}, "val": {}, "test":{}},
+  "city_dirs": {"aachen":{}},
+  "city_ids": {"aachen": "000019"},
+  "image_folder": "leftImg8bit",
+  "split_folder": "imglists",
+  "label_folder": "gtFine",
+  "image_size": {"width": 2048, "height": 1024}
+}

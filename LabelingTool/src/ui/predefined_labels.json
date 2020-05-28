@@ -1,0 +1,76 @@
+{
+    "labels": [
+        {
+            "type": 0,
+            "name": "line",
+            "isPathClosed": false,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "angle",
+            "isPathClosed": false,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "boundry",
+            "isPathClosed": false,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "eraser",
+            "isPathClosed": false,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "box",
+            "isPathClosed": true,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "bandAid",
+            "isPathClosed": true,
+            "enable": false
+        },
+        {
+            "type": 1,
+            "name": "airconParts",
+            "isPathClosed": true,
+            "enable": false
+        },
+        {
+            "type": 1,
+            "name": "conrod-circle",
+            "isPathClosed": true,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "conrod-contour",
+            "isPathClosed": true,
+            "enable": false
+        },
+        {
+            "type": 0,
+            "name": "outer-contour",
+            "isPathClosed": true,
+            "enable": true
+        },
+        {
+            "type": 0,
+            "name": "conrod-contour",
+            "isPathClosed": true,
+            "enable": true
+        },
+        {
+            "name": "conrod-circle",
+            "enable": true,
+            "isPathClosed": true,
+            "type": 1
+        }
+    ]
+}

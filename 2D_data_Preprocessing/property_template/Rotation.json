@@ -1,0 +1,29 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "angle_lower": {
+        "value": 0,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0,
+        "maximum": 360,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "angle_upper": {
+        "value": 360,
+        "value_options": [],
+        "type": "float",
+        "minimum": 1,
+        "maximum": 360,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}

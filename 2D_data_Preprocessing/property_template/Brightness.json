@@ -1,0 +1,65 @@
+{
+    "brightness_lower": {
+        "value": -10,
+        "value_options": [],
+        "type": "int",
+        "minimum": -255,
+        "maximum": 255,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "brightness_upper": {
+        "value": 10,
+        "value_options": [],
+        "type": "int",
+        "minimum": -255,
+        "maximum": 255,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "gamma_lower": {
+        "value": 1.0,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    },
+    "gamma_upper": {
+        "value": 1.0,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    },
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "scale": {
+        "value": 1,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0.01,
+        "maximum": 100,
+        "tool_tip": "",
+        "single_step": 0.1
+    },
+    "use_gamma": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    }
+}

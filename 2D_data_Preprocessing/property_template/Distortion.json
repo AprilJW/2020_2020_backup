@@ -1,0 +1,47 @@
+{
+    "grid_height": {
+        "value": 4,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "grid_width": {
+        "value": 4,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "magnitude": {
+        "value": 4,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "prob": {
+        "value": 0.3,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0,
+        "maximum": 1,
+        "tool_tip": "",
+        "single_step": 0.1
+    }
+}

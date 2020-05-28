@@ -1,0 +1,11 @@
+{
+    "is_used": {
+        "value": true,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    }
+}

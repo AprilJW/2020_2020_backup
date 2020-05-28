@@ -1,0 +1,17 @@
+{
+    "dataset_name": "VOC2012",
+    "sub_dirs": {
+            "ImageSets": {"Segmentation": {"train.txt":{}, "trainval.txt":{}, "val.txt":{}}},
+            "dataset": {"train.txt":{}, "val.txt":{}},
+            "JPEGImages": {},
+            "SegmentationClass": {},
+            "SegmentationClassAug": {}
+    },
+    "image_modes": ["JPEGImages"],
+    "split_modes": ["dataset", "ImageSets/Segmentation"],
+    "label_modes": ["SegmentationClass", "SegmentationClassAug"],
+    "dataset_prefix": "2007_",
+    "image_size": {"width": 500, "height": 500}
+}
+
+

@@ -1,0 +1,65 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "roi_h": {
+        "value": 500,
+        "value_options": [],
+        "type": "int",
+        "minimum": 0,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "roi_w": {
+        "value": 500,
+        "value_options": [],
+        "type": "int",
+        "minimum": 0,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "roi_origin_x": {
+        "value": -1,
+        "value_options": [],
+        "type": "int",
+        "minimum": -1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "roi_origin_y": {
+        "value": -1,
+        "value_options": [],
+        "type": "int",
+        "minimum": -1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "image_height": {
+        "value": 964,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "image_width": {
+        "value": 1292,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "clip_limit": {
+        "value": 4,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0.1,
+        "maximum": 256,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "tile_grid_size_h": {
+        "value": 8,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "tile_grid_size_w": {
+        "value": 8,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}

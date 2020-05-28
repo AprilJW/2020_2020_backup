@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1105</width>
+    <height>1030</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dataset Tools</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_9">
+    <item>
+     <widget class="QLabel" name="dataset_type">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dataset Type: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollBars">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>643</width>
+         <height>694</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="label_info_text">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1105</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpen_Dir"/>
+   </widget>
+   <widget class="QMenu" name="menuView_2">
+    <property name="title">
+     <string>Canvas</string>
+    </property>
+    <addaction name="actionPrev_Image"/>
+    <addaction name="actionNext_Image"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionShow_File_List"/>
+    <addaction name="actionResize_Params"/>
+    <addaction name="actionChange_Pixel_Values"/>
+    <addaction name="actionAugment_Data"/>
+    <addaction name="actionRename_Files"/>
+    <addaction name="actionMerge_Dir"/>
+    <addaction name="actionShow_Log"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Data Format</string>
+    </property>
+    <addaction name="actionVoc_Data_Format"/>
+    <addaction name="actionXml_To_Json"/>
+    <addaction name="actionJson_To_Xml"/>
+   </widget>
+   <widget class="QMenu" name="menuTools_2">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionWrite_File_List"/>
+    <addaction name="actionMerge_Images_Labels"/>
+    <addaction name="actionSplit_Dir"/>
+    <addaction name="actionShuffle"/>
+    <addaction name="actionCompute_rgb_mean"/>
+    <addaction name="actionSave_mask"/>
+   </widget>
+   <widget class="QMenu" name="menuDepth">
+    <property name="title">
+     <string>Depth</string>
+    </property>
+    <addaction name="actionDepth_Encoding"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView_2"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuTools_2"/>
+   <addaction name="menuDepth"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dock_file_list">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>File List</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QListWidget" name="fileList"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_resize_files">
+   <property name="windowTitle">
+    <string>Resize Params</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QFormLayout" name="formLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="resize_mode">
+             <item>
+              <property name="text">
+               <string>Auto Fill</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Maintain H/W Ratio</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Crop</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ROI</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>FILE</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_width">
+             <property name="text">
+              <string>New Image Width</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="new_img_width">
+             <property name="maximum">
+              <number>20000</number>
+             </property>
+             <property name="value">
+              <number>500</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_height">
+             <property name="text">
+              <string>New Image Height</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="new_img_height">
+             <property name="maximum">
+              <number>20000</number>
+             </property>
+             <property name="value">
+              <number>500</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_scale">
+             <property name="text">
+              <string>Scale Ratio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDoubleSpinBox" name="img_scale_ratio">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="decimals">
+              <number>6</number>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_resize_roi">
+             <property name="text">
+              <string>ROI</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_resize_file">
+             <property name="text">
+              <string>Example File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="resize_file"/>
+           </item>
+           <item row="4" column="1">
+            <widget class="ROIWidget" name="roi_widget" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="RGBWidget" name="widget_rgb_resize" native="true"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="resize_images">
+          <property name="text">
+           <string>Resize images</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_change_pixel_values">
+   <property name="windowTitle">
+    <string>Change Pixel Values</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>new value</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="old_value_text">
+          <property name="toolTip">
+           <string>No White Space</string>
+          </property>
+          <property name="text">
+           <string>1,2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="modifyPixelValues">
+          <property name="text">
+           <string>Modify Pixel Values</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>old value</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="newPixelValue">
+          <property name="maximum">
+           <number>256</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="modify_none_zero">
+          <property name="text">
+           <string>modify all none-zero pixel values</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_logger">
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Log</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <property name="leftMargin">
+      <number>9</number>
+     </property>
+     <property name="topMargin">
+      <number>9</number>
+     </property>
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
+     <property name="bottomMargin">
+      <number>9</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_4" native="true">
+       <layout class="QFormLayout" name="formLayout_4">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QComboBox" name="loggingLevel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Logging level</string>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Verbose</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Debug</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Info</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Warning</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Error</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Fatal</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="clear_log">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="logger"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_augment_data">
+   <property name="windowTitle">
+    <string>Augment Data</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_6">
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="MinMaxWidget" name="widget_contrast" native="true"/>
+     </item>
+     <item>
+      <widget class="MinMaxWidget" name="widget_brightness" native="true"/>
+     </item>
+     <item>
+      <widget class="MinMaxWidget" name="widget_scale" native="true"/>
+     </item>
+     <item>
+      <widget class="MinMaxWidget" name="widget_rotation" native="true"/>
+     </item>
+     <item>
+      <widget class="MinMaxWidget" name="widget_translation" native="true"/>
+     </item>
+     <item>
+      <widget class="RGBWidget" name="widget_rgb_increase" native="true"/>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <layout class="QFormLayout" name="formLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Remain Ratio in aug</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Augment Times</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="augment_times">
+          <property name="value">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDoubleSpinBox" name="remain_ratio_in_aug">
+          <property name="maximum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.970000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="augment_data">
+       <property name="text">
+        <string>Start Data Augmention</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_rename_files">
+   <property name="windowTitle">
+    <string>Rename Files</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_7">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="rename_files">
+       <property name="text">
+        <string>Rename Files</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QWidget" name="widget_3" native="true">
+       <layout class="QFormLayout" name="formLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="prefix_list">
+          <item>
+           <property name="text">
+            <string>2007_</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>rgb_image_</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>self-defined</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="start_idx">
+          <property name="maximum">
+           <number>10000000</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Prefix</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Idx</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dock_merge_dir">
+   <property name="windowTitle">
+    <string>Merge Dir</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_8">
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="MergeDirDialog" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="maximumSize">
+    <size>
+     <width>150</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionOpen_Dir"/>
+   <addaction name="actionStart_Format_DataSet"/>
+   <addaction name="actionXml_To_Json"/>
+   <addaction name="actionJson_To_Xml"/>
+   <addaction name="actionWrite_File_List"/>
+   <addaction name="actionResize_Params"/>
+   <addaction name="actionRename_Files"/>
+   <addaction name="actionAugment_Data"/>
+   <addaction name="actionMerge_Dir"/>
+   <addaction name="actionChange_Pixel_Values"/>
+   <addaction name="actionBmp_To_Jpg"/>
+   <addaction name="actionShuffle"/>
+   <addaction name="actionVoc_Data_Format"/>
+   <addaction name="actionDepth_Encoding"/>
+   <addaction name="actionCompute_rgb_mean"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/open.png</normaloff>icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionOpen_Dir">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open Dir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionOpen_Recent">
+   <property name="text">
+    <string>Open Recent</string>
+   </property>
+  </action>
+  <action name="actionNext_Image">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/next.png</normaloff>icons/next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionPrev_Image">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/prev.png</normaloff>icons/prev.png</iconset>
+   </property>
+   <property name="text">
+    <string>Prev Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionShow_File_List">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show File List</string>
+   </property>
+  </action>
+  <action name="actionResize_Params">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Resize Params</string>
+   </property>
+  </action>
+  <action name="actionChange_Pixel_Values">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Change Pixel Values</string>
+   </property>
+  </action>
+  <action name="actionMerge_Dir">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Merge Dir</string>
+   </property>
+  </action>
+  <action name="actionSplit_Dir">
+   <property name="text">
+    <string>Split Dir</string>
+   </property>
+  </action>
+  <action name="actionAugment_Data">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Augment Data</string>
+   </property>
+  </action>
+  <action name="actionRename_Files">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Rename Files</string>
+   </property>
+  </action>
+  <action name="actionShow_Log">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Log</string>
+   </property>
+  </action>
+  <action name="actionVoc_Data_Format">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/edit.png</normaloff>icons/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Voc Data Format</string>
+   </property>
+  </action>
+  <action name="actionWrite_File_List">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Write File List</string>
+   </property>
+  </action>
+  <action name="actionMerge_Images_Labels">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Merge Images/Labels To One Dir</string>
+   </property>
+  </action>
+  <action name="actionXml_To_Json">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/fit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Xml To Json</string>
+   </property>
+  </action>
+  <action name="actionJson_To_Xml">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/fit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Json To Xml</string>
+   </property>
+  </action>
+  <action name="actionStart_Format_DataSet">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/start.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Start Format DataSet</string>
+   </property>
+  </action>
+  <action name="actionBmp_To_Jpg">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Bmp To Jpg</string>
+   </property>
+  </action>
+  <action name="actionShuffle">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/edit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Shuffle and Rename</string>
+   </property>
+  </action>
+  <action name="actionDepth_Encoding">
+   <property name="text">
+    <string>Depth Encoding</string>
+   </property>
+  </action>
+  <action name="actionCompute_rgb_mean">
+   <property name="text">
+    <string>compute rgb mean</string>
+   </property>
+   <property name="toolTip">
+    <string>compute rgb mean</string>
+   </property>
+  </action>
+  <action name="actionSave_mask">
+   <property name="text">
+    <string>Save mask</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>RGBWidget</class>
+   <extends>QWidget</extends>
+   <header>ui/RGBWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MinMaxWidget</class>
+   <extends>QWidget</extends>
+   <header>ui/MinMaxWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MergeDirDialog</class>
+   <extends>QFrame</extends>
+   <header>ui/MergeDirDialog.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ROIWidget</class>
+   <extends>QWidget</extends>
+   <header>ui/ROIWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

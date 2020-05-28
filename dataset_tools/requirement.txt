@@ -1,0 +1,6 @@
+noise
+tqdm
+Pillow
+opencv-python
+lxml
+pyqt5==5.10.1

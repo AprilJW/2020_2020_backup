@@ -1,0 +1,8 @@
+{
+	"training_param":{
+		"python": "../../Faster-RCNN-Keras/src/train_frcnn.py",
+		"--num_epochs": "500",
+		"--checkPeriod": "80",
+		"--input_weight_path": "~/Deep_learning_weights_and_data/weights/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5"
+	}
+}

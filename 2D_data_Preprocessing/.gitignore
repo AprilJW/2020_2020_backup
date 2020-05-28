@@ -1,0 +1,8 @@
+# Ignore python cache
+*.pyc
+.settings/
+*.orig
+*.idea/
+project/
+setting.ini
+

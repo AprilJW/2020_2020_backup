@@ -1,0 +1,47 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "is_same_size_in_class": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "is_same_size_in_image": {
+        "value": true,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "resize_ratio_lower": {
+        "value": 0,
+        "value_options": [],
+        "type": "float",
+        "minimum": -1,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    },
+    "resize_ratio_upper": {
+        "value": 0,
+        "value_options": [],
+        "type": "float",
+        "minimum": -1,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    }
+}

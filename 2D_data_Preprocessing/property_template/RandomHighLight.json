@@ -1,0 +1,47 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "max_hl_area": {
+        "value": 1000,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 1000000,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "max_hl_num": {
+        "value": 10,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 50,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "min_hl_area": {
+        "value": 100,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 1000000,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "min_hl_num": {
+        "value": 0,
+        "value_options": [],
+        "type": "int",
+        "minimum": 0,
+        "maximum": 1000000,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}

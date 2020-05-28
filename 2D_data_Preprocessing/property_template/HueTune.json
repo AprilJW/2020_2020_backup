@@ -1,0 +1,20 @@
+{
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "target_hue": {
+        "value": 0,
+        "value_options": [],
+        "type": "float",
+        "minimum": 0,
+        "maximum": 10,
+        "tool_tip": "",
+        "single_step": 0.1
+    }
+}

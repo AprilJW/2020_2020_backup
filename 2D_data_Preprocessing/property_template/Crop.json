@@ -1,0 +1,38 @@
+{
+    "crop_types": {
+        "value": "top",
+        "value_options": ["top","bottom","left","right","middle","random"],
+        "type": "EnumOpts",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "min_h": {
+        "value": 50,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "min_w": {
+        "value": 50,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}

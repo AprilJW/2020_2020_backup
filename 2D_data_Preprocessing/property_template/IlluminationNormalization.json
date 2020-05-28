@@ -1,0 +1,101 @@
+{
+    "method": {
+        "value": "Retinex_MSR",
+        "value_options": ["Retinex_SSR","Retinex_MSR","BgAdjust"],
+        "type": "EnumOpts",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "is_used": {
+        "value": false,
+        "value_options": [],
+        "type": "bool",
+        "minimum": null,
+        "maximum": null,
+        "tool_tip": "",
+        "single_step": -1
+    },
+    "SSR_kernelSize": {
+        "value": 21,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "Must be odd",
+        "single_step": 1
+    },
+    "mean_illumination": {
+        "value": 100,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "MSR_kernelSize1": {
+        "value": 15,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "Must be odd",
+        "single_step": 1
+    },
+    "MSR_kernelSize2": {
+        "value": 81,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "Must be odd",
+        "single_step": 1
+    },
+    "MSR_kernelSize3": {
+        "value": 201,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "Must be odd",
+        "single_step": 1
+    },
+    "BG_roi_x": {
+        "value": 30,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "BG_roi_y": {
+        "value": 700,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "BG_roi_width": {
+        "value": 200,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    },
+    "BG_roi_height": {
+        "value": 200,
+        "value_options": [],
+        "type": "int",
+        "minimum": 1,
+        "maximum": 9999,
+        "tool_tip": "",
+        "single_step": 1
+    }
+}
